@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from './Layout/Layout';
-import Home from './Pages/Home/Home';
+import Home from './Pages/Home/Home/Home';
 const router = createBrowserRouter([
   {
     path: "/",

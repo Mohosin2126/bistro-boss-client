@@ -23,11 +23,12 @@ console.log(menu)
             heading="From Our Menu"
             subHeading="Popular Items"
         ></SectionTitle>
-        <div>
+        <div className="grid md:grid-cols-2 gap-10">
             {
                 menu.map(item=><MenuItem item={item} key={item._id} ></MenuItem>)
             }
         </div>
+        <button className="btn flex mx-auto btn-outline border-0 border-b-4 mt-5">View Full Menu</button>
         </section>
     );
 };

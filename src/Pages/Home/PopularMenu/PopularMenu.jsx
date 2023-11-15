@@ -4,31 +4,31 @@ import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 
 const PopularMenu = () => {
-const [menu,setMenu]=useState([])
+    const [menu, setMenu] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch("menu.json")
-        .then(res=>res.json())
-        .then(data=>{
-            const popularItems=data.filter(item=>item.category==="popular")
-            setMenu(popularItems)
+            .then(res => res.json())
+            .then(data => {
+                const popularItems = data.filter(item => item.category === "popular")
+                setMenu(popularItems)
 
-        })
-    },[])
-console.log(menu)
+            })
+    }, [])
+    console.log(menu)
 
     return (
         <section className="mb-12">
-        <SectionTitle
-            heading="From Our Menu"
-            subHeading="Popular Items"
-        ></SectionTitle>
-        <div className="grid md:grid-cols-2 gap-10">
-            {
-                menu.map(item=><MenuItem item={item} key={item._id} ></MenuItem>)
-            }
-        </div>
-        <button className="btn flex mx-auto btn-outline border-0 border-b-4 mt-5">View Full Menu</button>
+            <SectionTitle
+                heading="From Our Menu"
+                subHeading="Popular Items"
+            ></SectionTitle>
+            <div className="grid md:grid-cols-2 gap-10">
+                {
+                    menu.map(item => <MenuItem item={item} key={item._id} ></MenuItem>)
+                }
+            </div>
+            <button className="btn flex mx-auto btn-outline border-0 border-b-4 mt-5">View Full Menu</button>
         </section>
     );
 };

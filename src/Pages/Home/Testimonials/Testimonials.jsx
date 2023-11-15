@@ -35,7 +35,7 @@ const Testimonials = () => {
 
                         <div className="flex flex-col items-center mx-24 my-16">
 
-                        <Rating
+                            <Rating
                                 style={{ maxWidth: 180 }}
                                 value={review.rating}
                                 readOnly

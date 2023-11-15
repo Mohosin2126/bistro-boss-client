@@ -10,11 +10,11 @@ import Home from './Pages/Home/Home/Home';
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<Layout></Layout>,
-    children:[
+    element: <Layout></Layout>,
+    children: [
       {
-        path:"/",
-      element:<Home></Home>
+        path: "/",
+        element: <Home></Home>
       }
     ]
   },
@@ -22,9 +22,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='max-w-screen-xl mx-auto'>   
-      <RouterProvider router={router}/>
-      </div>
+    <div className='max-w-screen-xl mx-auto'>
+      <RouterProvider router={router} />
+    </div>
 
   </React.StrictMode>,
 )

@@ -7,13 +7,20 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Navigation } from 'swiper/modules';
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
 
 
+    const [reviews, setReviews] = useState([]);
 
+    useEffect(() => {
+        fetch('reviews.json')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+console.log(reviews)
 
-    
     return (
        <section>
         <SectionTitle  subHeading="What Our Client Say"

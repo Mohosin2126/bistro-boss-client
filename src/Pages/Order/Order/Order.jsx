@@ -13,9 +13,16 @@ const Order = () => {
            <div>
            <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
   <TabList>
-    <Tab>Title 1</Tab>
-    <Tab>Title 2</Tab>
+    <Tab>Salad</Tab>
+    <Tab>Pizza</Tab>
+    <Tab>Soup</Tab>
+    <Tab>Dessert</Tab>
+    <Tab>Drinks</Tab>
+
   </TabList>
+  <TabPanel></TabPanel>
+  <TabPanel></TabPanel>
+  <TabPanel></TabPanel>
   <TabPanel></TabPanel>
   <TabPanel></TabPanel>
 </Tabs>

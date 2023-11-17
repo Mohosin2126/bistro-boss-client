@@ -1,10 +1,16 @@
 import { Helmet} from 'react-helmet-async';
-import Cover from '../Shared/Cover/Cover';
 
-import menuImg from"../../assets/menu/menu-bg.jpg"
+import menuImg from '../../assets/menu/menu-bg.jpg'
+import soupImg from '../../assets/menu/soup-bg.jpg'
+import saladImg from '../../assets/menu/salad-bg.jpg'
+import pizzaImg from '../../assets/menu/pizza-bg.jpg'
+import dessertImg from '../../assets/menu/dessert-bg.jpeg'
+import Cover from '../Shared/Cover/Cover';
 import useMenu from '../../hooks/UseMenu';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import MenuCategory from './MenuCategory';
+
+
 
 const Menu = () => {
 const [menu]=useMenu()
@@ -19,10 +25,20 @@ const offered=menu.filter(item=>item.category==='offered')
         <title>Bistro|Menu</title>
       </Helmet>
       <div>
+        {/* main cover */}
       <Cover img={menuImg} title='Our menu'></Cover>
       </div>
+      {/* Offer Items */}
       <SectionTitle subHeading="Don't  Miss Today's Offer" heading="Today's Offer"></SectionTitle>
       <MenuCategory items={offered}></MenuCategory>
+      {/* dessert menu items */}
+      <MenuCategory
+      items={deserts}
+      
+      title='Dessert'
+       coverImg={dessertImg}
+      
+      ></MenuCategory>
         </div>
     );
 };

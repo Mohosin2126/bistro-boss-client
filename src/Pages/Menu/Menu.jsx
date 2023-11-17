@@ -35,7 +35,7 @@ const offered=menu.filter(item=>item.category==='offered')
       <MenuCategory
       items={deserts}
       
-      title='Dessert'
+      title='dessert'
        coverImg={dessertImg}
       
       ></MenuCategory>
@@ -45,14 +45,14 @@ const offered=menu.filter(item=>item.category==='offered')
       <MenuCategory
       items={pizza}
       
-      title='Pizza'
+      title='pizza'
        coverImg={pizzaImg}
       
       ></MenuCategory>
       {/* salad */}
       <MenuCategory
       items={salad}
-      title='Salad'
+      title='salad'
        coverImg={saladImg}
       ></MenuCategory>
 

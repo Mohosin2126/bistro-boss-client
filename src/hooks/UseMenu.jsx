@@ -11,7 +11,7 @@ const [loading,setLoding]=useState(true)
                 setLoding(false)
             })
     }, [])
-   return[menu]
+   return[menu,loading]
 
 }
 export default useMenu;

@@ -4,6 +4,7 @@ import Cover from "../../Shared/Cover/Cover";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import useMenu from "../../../hooks/UseMenu";
+import FoodCard from "../../../Components/FoodCard/FoodCard";
 const Order = () => {
     const [tabIndex,setTabIndex]=useState(0)
     const [menu]=useMenu()
@@ -11,8 +12,7 @@ const Order = () => {
     const soup=menu.filter(item=>item.category==='soup')
     const salad=menu.filter(item=>item.category==='salad')
     const pizza=menu.filter(item=>item.category==='pizza')
-    const offered=menu.filter(item=>item.category==='offered')
-       
+    const drinks=menu.filter(item=>item.category==='drinks')
     return (
         <div>
            <Cover img={orderCoverImg} title="Order Food"></Cover>
@@ -28,11 +28,31 @@ const Order = () => {
     <Tab>Drinks</Tab>
 
   </TabList>
-  <TabPanel></TabPanel>
-  <TabPanel></TabPanel>
-  <TabPanel></TabPanel>
-  <TabPanel></TabPanel>
-  <TabPanel></TabPanel>
+  <TabPanel>
+    {
+        salad.map(item=><FoodCard item={item} key={item._id}></FoodCard>)
+    }
+  </TabPanel>
+  <TabPanel>
+  {
+        pizza.map(item=><FoodCard item={item} key={item._id}></FoodCard>)
+    }
+  </TabPanel>
+  <TabPanel>
+  {
+        soup.map(item=><FoodCard item={item} key={item._id}></FoodCard>)
+    }
+  </TabPanel>
+  <TabPanel>
+  {
+        deserts.map(item=><FoodCard item={item} key={item._id}></FoodCard>)
+    }
+  </TabPanel>
+  <TabPanel>
+  {
+        drinks.map(item=><FoodCard item={item} key={item._id}></FoodCard>)
+    }
+  </TabPanel>
 </Tabs>
            </div>
         </div>

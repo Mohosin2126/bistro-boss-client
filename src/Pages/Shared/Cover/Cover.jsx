@@ -1,9 +1,9 @@
 
+
 const Cover = () => {
     return (
-        <div>
-            
-        </div>
+      <h1>hello this is me </h1>
+
     );
 };
 

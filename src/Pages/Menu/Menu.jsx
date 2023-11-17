@@ -39,6 +39,31 @@ const offered=menu.filter(item=>item.category==='offered')
        coverImg={dessertImg}
       
       ></MenuCategory>
+
+
+      {/* pizza */}
+      <MenuCategory
+      items={pizza}
+      
+      title='Pizza'
+       coverImg={pizzaImg}
+      
+      ></MenuCategory>
+      {/* salad */}
+      <MenuCategory
+      items={salad}
+      title='Salad'
+       coverImg={saladImg}
+      ></MenuCategory>
+
+      {/* soup */}
+      <MenuCategory
+      items={soup}
+      
+      title='soup'
+       coverImg={soupImg}
+      
+      ></MenuCategory>
         </div>
     );
 };

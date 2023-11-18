@@ -1,8 +1,16 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 
 const Login = () => {
+ useEffect(()=>{
+    loadCaptchaEnginge(7); 
+ },[])
+
+
+
+
     const handleLogin = e => {
         e.preventDefault()
         const form = e.target

@@ -12,6 +12,7 @@ import Menu from './Pages/Menu/Menu';
 import Order from './Pages/Order/Order/Order';
 import Login from './Login/Login';
 import AuthProvider from './Provider/AuthProvider';
+import SignUp from './SignUp/SignUp';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<Login></Login>,
+      },
+      {
+        path:"/signup",
+        element:<SignUp></SignUp>,
       }
     ]
   },

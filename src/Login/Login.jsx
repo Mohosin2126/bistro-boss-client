@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
 
 const Login = () => {
     const handleLogin = e => {
@@ -38,7 +39,13 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <LoadCanvasTemplate />
+                                </label>
+                                <input  type="text" name="captcha" placeholder="type the captcha above" className="input input-bordered" />
 
+                            </div>
                             <div className="form-control mt-6">
                                 {/* TODO: apply disabled for re captcha */}
                                 <input disabled={false} className="btn btn-primary" type="submit" value="Login" />

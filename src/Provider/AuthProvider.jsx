@@ -1,9 +1,22 @@
+import { useState } from "react";
+import { createContext } from "react";
 
-const AuthProvider = () => {
+export const AuthContext=createContext(null)
+
+
+const AuthProvider = ({children}) => {
+ const [user,setUser]=useState(null)
+ const [loading,setLoading]=useState(true)
+
+const authInfo={
+user,
+loading
+}
+
     return (
-        <div>
-            
-        </div>
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
     );
 };
 

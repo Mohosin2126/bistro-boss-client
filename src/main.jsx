@@ -11,6 +11,7 @@ import Home from './Pages/Home/Home/Home';
 import Menu from './Pages/Menu/Menu';
 import Order from './Pages/Order/Order/Order';
 import Login from './Login/Login';
+import AuthProvider from './Provider/AuthProvider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,11 +40,12 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-    <HelmetProvider> <div className='max-w-screen-xl mx-auto'>
+   <AuthProvider>
+   <HelmetProvider> <div className='max-w-screen-xl mx-auto'>
       <RouterProvider router={router} />
     </div>
     </HelmetProvider>
-   
+   </AuthProvider>
 
   </React.StrictMode>,
 )

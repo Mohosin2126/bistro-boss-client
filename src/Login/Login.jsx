@@ -2,9 +2,17 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+    const handleLogin = e => {
+        e.preventDefault()
+        const form = e.target
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+    }
+
     return (
         <div>
-             <Helmet>
+            <Helmet>
                 <title>Bistro Boss | Login</title>
             </Helmet>
             <div className="hero min-h-screen bg-base-200">
@@ -14,7 +22,7 @@ const Login = () => {
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                     </div>
                     <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body">
+                        <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -30,7 +38,7 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                           
+
                             <div className="form-control mt-6">
                                 {/* TODO: apply disabled for re captcha */}
                                 <input disabled={false} className="btn btn-primary" type="submit" value="Login" />

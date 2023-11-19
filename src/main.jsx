@@ -61,13 +61,13 @@ const router = createBrowserRouter([
   {
     path:"/dashboard",
     element:<DashBoard></DashBoard>,
-    children:[
-      {
-        path:"/cart",
-        element:<Cart></Cart>
-      }
-    ]
-  }
+   children:[
+{
+  path:"/dashboard/cart",
+  element:<Cart></Cart>,
+}
+   ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -20,6 +20,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import DashBoard from './Layout/DashBoard';
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path:"/dashboard",
+    element:<DashBoard></DashBoard>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

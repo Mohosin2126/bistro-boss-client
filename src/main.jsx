@@ -34,25 +34,25 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path:"/menu",
-        element:<Menu></Menu>,
+        path: "/menu",
+        element: <Menu></Menu>,
       },
       {
-        path:"/order/:category",
-        element:<Order></Order>,
+        path: "/order/:category",
+        element: <Order></Order>,
       },
       {
-        path:"/login",
-        element:<Login></Login>,
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path:"/signup",
-        element:<SignUp></SignUp>,
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
       {
-        path:"/secret",
-        element:<PrivateRoute> <Secret></Secret></PrivateRoute>
-       
+        path: "/secret",
+        element: <PrivateRoute> <Secret></Secret></PrivateRoute>
+
       }
     ]
   },
@@ -61,16 +61,16 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-   <AuthProvider>
-    <QueryClientProvider client={queryClient}>
-    <HelmetProvider> 
-    <div className='max-w-screen-xl mx-auto'>
-      <RouterProvider router={router} />
-    </div>
-    </HelmetProvider>
-    </QueryClientProvider>
-  
-   </AuthProvider>
+    <AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <HelmetProvider>
+          <div className='max-w-screen-xl mx-auto'>
+            <RouterProvider router={router} />
+          </div>
+        </HelmetProvider>
+      </QueryClientProvider>
+
+    </AuthProvider>
 
   </React.StrictMode>,
 )

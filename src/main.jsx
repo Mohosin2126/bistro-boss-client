@@ -21,6 +21,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import DashBoard from './Layout/DashBoard';
+import Cart from './Pages/DashBoard/Cart/Cart';
 
 const queryClient = new QueryClient();
 
@@ -59,7 +60,13 @@ const router = createBrowserRouter([
   },
   {
     path:"/dashboard",
-    element:<DashBoard></DashBoard>
+    element:<DashBoard></DashBoard>,
+    children:[
+      {
+        path:"/cart",
+        element:<Cart></Cart>
+      }
+    ]
   }
 ]);
 

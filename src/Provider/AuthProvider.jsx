@@ -18,10 +18,12 @@ const signIn=(email,password)=>{
     return signInWithEmailAndPassword(auth, email,password)
 }
 
-const logOut=(auth)=>{
-    setLoading(true)
-    return signOut(auth)
+
+const logOut = () => {
+    setLoading(true);
+    return signOut(auth);
 }
+
 
 useEffect(()=>{
 const unsubscribe=onAuthStateChanged(auth,currentUser => {setUser(currentUser);

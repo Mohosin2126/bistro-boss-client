@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from './Layout/Layout';
 import Home from './Pages/Home/Home/Home';
@@ -15,6 +16,14 @@ import AuthProvider from './Provider/AuthProvider';
 import SignUp from './SignUp/SignUp';
 import Secret from './Pages/Shared/Secret/Secret';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+
+const queryClient = new QueryClient();
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,10 +62,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
    <AuthProvider>
-   <HelmetProvider> <div className='max-w-screen-xl mx-auto'>
+    <QueryClientProvider client={queryClient}>
+    <HelmetProvider> 
+    <div className='max-w-screen-xl mx-auto'>
       <RouterProvider router={router} />
     </div>
     </HelmetProvider>
+    </QueryClientProvider>
+  
    </AuthProvider>
 
   </React.StrictMode>,

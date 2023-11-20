@@ -20,7 +20,7 @@ const [cart]=useCart()
       
       <li>
 
-        <Link> <button className="btn">
+        <Link to="/dashboard"> <button className="btn">
                     <FaShoppingCart className="mr-2"></FaShoppingCart>
                     <div className="badge badge-secondary">+{cart.length}</div>
                 </button></Link>

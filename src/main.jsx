@@ -23,6 +23,7 @@ import {
 import DashBoard from './Layout/DashBoard';
 import Cart from './Pages/DashBoard/Cart/Cart';
 import AllUsers from './Pages/DashBoard/AllUsers/AllUsers';
+import AddItems from './Pages/DashBoard/AddItems/AddItems';
 
 const queryClient = new QueryClient();
 
@@ -70,7 +71,11 @@ const router = createBrowserRouter([
 // admin routes 
 {
   path:"/dashboard/users",
-  element:<AllUsers></AllUsers>
+  element:<AllUsers></AllUsers>,
+},
+{
+  path:"/dashboard/addItems",
+  element:<AddItems></AddItems>
 }
    ],
   },

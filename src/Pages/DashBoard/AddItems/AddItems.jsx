@@ -3,11 +3,16 @@ import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { FaUtensils } from "react-icons/fa";
 const AddItems = () => {
     const { register, handleSubmit, reset } = useForm();
+const onSubmit=(data)=>{
+    console.log(data)
+}
+
+
     return (
         <div>
         <SectionTitle heading="add an item" subHeading="What's new?" ></SectionTitle>
         <div>
-            <form >
+            <form onSubmit={handleSubmit(onSubmit)} >
                 <div className="form-control w-full my-6">
                     <label className="label">
                         <span className="label-text">Recipe Name*</span>

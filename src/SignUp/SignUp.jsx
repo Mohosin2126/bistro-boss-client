@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
 
 
 
@@ -108,7 +109,8 @@ const onSubmit=data=>{
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p className="px-7"><small>Already have an account <Link to="/login">Login</Link></small></p>
+                        <p className="px-7"><small>Already have an account <Link to="/login">Login</Link>
+                        <SocialLogin></SocialLogin></small></p>
                     </div>
                 </div>
             </div>

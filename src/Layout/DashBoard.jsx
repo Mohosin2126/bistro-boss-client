@@ -1,12 +1,12 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from "react-icons/fa";
 import useCart from "../hooks/useCart";
-// import useAdmin from "../hooks/useAdmin";
+import useAdmin from "../hooks/useAdmin";
 const DashBoard = () => {
     const [cart] = useCart();
 
-   const isAdmin=true
-    // const [isAdmin] = useAdmin();
+   
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="flex">

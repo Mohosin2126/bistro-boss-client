@@ -26,6 +26,7 @@ import AllUsers from './Pages/DashBoard/AllUsers/AllUsers';
 import AddItems from './Pages/DashBoard/AddItems/AddItems';
 import AdminRoute from './Pages/DashBoard/AdminRoute/AdminRoute';
 import ManageItems from './Pages/DashBoard/ManageItems/ManageItems';
+import UpdateItem from './Pages/DashBoard/UpdateItem/UpdateItem';
 
 const queryClient = new QueryClient();
 
@@ -81,7 +82,13 @@ const router = createBrowserRouter([
 },
 {
   path:"/dashboard/manageItems",
-  element: <AdminRoute><ManageItems></ManageItems></AdminRoute>    
+  element: <AdminRoute><ManageItems></ManageItems></AdminRoute>,    
+},
+{
+  
+    path: '/dashboard/updateItem/:id',
+    element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
+    loader: ({params}) => fetch(`http://localhost:5000/${params.id}`)
 }
    ],
   },

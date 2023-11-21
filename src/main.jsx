@@ -25,6 +25,7 @@ import Cart from './Pages/DashBoard/Cart/Cart';
 import AllUsers from './Pages/DashBoard/AllUsers/AllUsers';
 import AddItems from './Pages/DashBoard/AddItems/AddItems';
 import AdminRoute from './Pages/DashBoard/AdminRoute/AdminRoute';
+import ManageItems from './Pages/DashBoard/ManageItems/ManageItems';
 
 const queryClient = new QueryClient();
 
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
 {
   path:"/dashboard/addItems",
   element: <AdminRoute><AddItems></AddItems></AdminRoute>,
+},
+{
+  path:"/dashboard/manageItems",
+  element: <AdminRoute><ManageItems></ManageItems></AdminRoute>    
 }
    ],
   },

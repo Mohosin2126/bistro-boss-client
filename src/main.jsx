@@ -27,6 +27,7 @@ import AddItems from './Pages/DashBoard/AddItems/AddItems';
 import AdminRoute from './Pages/DashBoard/AdminRoute/AdminRoute';
 import ManageItems from './Pages/DashBoard/ManageItems/ManageItems';
 import UpdateItem from './Pages/DashBoard/UpdateItem/UpdateItem';
+import Payment from './Pages/DashBoard/Payment/Payment';
 
 const queryClient = new QueryClient();
 
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
 {
   path:"/dashboard/cart",
   element:<Cart></Cart>,
+},
+{
+  path:"/dashboard/payment",
+  element:<Payment></Payment>,
 },
 // admin routes 
 {
